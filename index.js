@@ -142,7 +142,7 @@ function oyun(oyuncu, bilgisayar){
 Şimdi kendi seçtiğiniz bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığınız oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
-function bilgisayarinSecimi() {
+function bilgisayarinSecimi(secenek) {
   let denizRandomSayisi = Math.random() * 3;
   if(denizRandomSayisi < 1) {
     return "taş";
@@ -153,6 +153,7 @@ function bilgisayarinSecimi() {
 }
 
 }
+bilgisayarinSecimi ();
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
