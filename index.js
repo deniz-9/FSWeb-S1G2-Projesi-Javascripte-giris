@@ -94,11 +94,11 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(yas){
+  console.log ("köpek yaş :", yas);
+  return yas;
 }
-
-
+kopeginYasi(2);
 
 /* Görev 3 */
 /*
@@ -116,6 +116,14 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 
 function oyun(oyuncu, bilgisayar){
   /*buraya kodunu yazabilirsin*/
+  switch(oyuncu) {
+    case "Taş":
+      return bilgisayar=== "makas" ?
+      "Kazandın!" :  bilgisayar === "Kağıt" ? "Kaybettin!" : "Beraberlik";
+      
+      
+        
+  }
 }
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
@@ -133,7 +141,17 @@ function oyun(oyuncu, bilgisayar){
 Şimdi kendi seçtiğiniz bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığınız oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
+function bilgisayarinSecimi() {
+  let denizRandomSayisi = Math.random() * 3;
+  if(denizRandomSayisi < 1) {
+    return "taş";
+} else if (denizRandomSayisi < 2 ) {
+  return "makas";
+} else {
+  return "kağıt";
+}
 
+}
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
@@ -144,8 +162,9 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
+function milDonusturucu(km){
   /*buraya kodunu yazabilirsin*/
+  return km * 0.621371;
 }
 
 
@@ -160,8 +179,9 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
+function feetDonusturucu(cm){
   /*buraya kodunu yazabilirsin*/
+  return cm / 30.48;
 }
 
 
@@ -199,10 +219,31 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
+function notHesapla(not){
 /*buraya kodunu yazabilirsin*/
-}
 
+
+if(not >= 90 && not <= 100) {
+  console.log("A aldın.");
+}
+else if (not>=80 && not <=89) {
+  console.log("B aldın.");
+}
+else if (not >=70 && not<=79) {
+  console.log("C aldın");
+}
+else if (not >=60 && not <=69) {
+  console.log("D aldın.");
+}
+else if (not >50 && not <=50) {
+  console.log("F aldın.")
+}
+  else {
+    console.log("İf else in sonu")
+  }
+   
+}
+notHesapla ();
 
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
