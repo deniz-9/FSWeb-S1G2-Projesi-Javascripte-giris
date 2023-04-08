@@ -118,14 +118,15 @@ function oyun(oyuncu, bilgisayar){
   /*buraya kodunu yazabilirsin*/
   switch(oyuncu) {
     case "Taş":
-      return bilgisayar=== "makas" ?
+      return bilgisayar=== "Makas" ?
       "Kazandın!" :  bilgisayar === "Kağıt" ? "Kaybettin!" : "Beraberlik";
-      
-      
-        
+      case "Kağıt":
+        return bilgisayar ==="Taş" ?
+        "Kazandın!" : bilgisayar === "Makas" ? "Kaybettin" : "Beraberlik"; 
   }
+  
 }
-
+ oyun();
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
 Öncelikle aşağıdakileri yapın:
