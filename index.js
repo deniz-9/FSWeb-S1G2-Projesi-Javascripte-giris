@@ -123,10 +123,12 @@ function oyun(oyuncu, bilgisayar){
       case "Kağıt":
         return bilgisayar ==="Taş" ?
         "Kazandın!" : bilgisayar === "Makas" ? "Kaybettin" : "Beraberlik"; 
-  }
+        
+ 
+      }
   
 }
- oyun();
+ 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
 Öncelikle aşağıdakileri yapın:
@@ -145,15 +147,15 @@ function oyun(oyuncu, bilgisayar){
 function bilgisayarinSecimi(secenek) {
   let denizRandomSayisi = Math.random() * 3;
   if(denizRandomSayisi < 1) {
-    return "taş";
+    return "Taş";
 } else if (denizRandomSayisi < 2 ) {
-  return "makas";
+  return "Makas";
 } else {
-  return "kağıt";
+  return "Kağıt";
 }
 
 }
-bilgisayarinSecimi ();
+console.log(oyun("Makas",bilgisayarinSecimi()));
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
@@ -201,9 +203,13 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
+function cocukSarkisi(maymun){
       /*buraya kodunu yazabilirsin*/
+    console.log( "5 küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!");
 }
+ /*for (let i=0; i <5; i--) {
+  console.log(i);
+ }
 
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -221,30 +227,29 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(not){
+function notHesapla(not) { 
 /*buraya kodunu yazabilirsin*/
-
-
 if(not >= 90 && not <= 100) {
   console.log("A aldın.");
 }
-else if (not>=80 && not <=89) {
+ if (not>=80 && not <=89) {
   console.log("B aldın.");
 }
-else if (not >=70 && not<=79) {
+ if (not >=70 && not<=79) {
   console.log("C aldın");
 }
-else if (not >=60 && not <=69) {
+ if (not >=60 && not <=69) {
   console.log("D aldın.");
 }
-else if (not >50 && not <=50) {
+ if (not >=50 && not <=50) {
   console.log("F aldın.")
 }
   else {
     console.log("İf else in sonu")
   }
-   
+  return not;
 }
+
 notHesapla ();
 
 
