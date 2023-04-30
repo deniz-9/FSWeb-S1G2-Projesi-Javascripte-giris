@@ -127,15 +127,7 @@ function oyun(oyuncu, bilgisayar) {
   ) {
     return "Kazandın!";
   }
-  if (oyuncu === bilgisayar) {
-    return "Beraberlik!";
-  } else if (
-    (oyuncu === "Makas" && bilgisayar === "Kağıt") ||
-    (oyuncu === "Taş" && bilgisayar === "Makas") ||
-    (oyuncu === "Kağıt" && bilgisayar === "Taş")
-  ) {
-    return "Kaybettin!";
-  }
+  return "Kaybettin!";
 
 }
 
@@ -218,7 +210,7 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 */
 
 function cocukSarkisi(maymunSayisi) {
-  return `${maymunSayisi} + küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
+  return `${maymunSayisi} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
 }
 
 
